@@ -12,17 +12,17 @@ namespace WeathApp.Droid
         {
             base.OnCreate(bundle);
 
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.Home);
 
-            Button button = FindViewById<Button>(Resource.Id.weatherBtn);
-
-            button.Click += Button_Click;
+            Button button = FindViewById<Button>(Resource.Id.weatherButton);
+            button.Click += Button3_Click;
         }
 
         private async void Button_Click(object sender, EventArgs e)
         {
             EditText zipCodeEntry = FindViewById<EditText>(Resource.Id.ZipCodeEntry);
-
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
             if (!String.IsNullOrEmpty(zipCodeEntry.Text))
             {
                 Weather weather = await Core.GetWeather(zipCodeEntry.Text);
@@ -34,6 +34,27 @@ namespace WeathApp.Droid
                 FindViewById<TextView>(Resource.Id.sunriseText).Text = weather.Sunrise;
                 FindViewById<TextView>(Resource.Id.sunsetText).Text = weather.Sunset;
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Home);
+
+            Button button = FindViewById<Button>(Resource.Id.weatherButton);
+
+            button.Click += Button3_Click;
+
+        }
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Main);
+
+            Button button = FindViewById<Button>(Resource.Id.weatherBtn);
+            button.Click += Button_Click;
+
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
+
         }
     }
 }

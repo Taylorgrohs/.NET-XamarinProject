@@ -3,4 +3,5 @@
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">WeathApp.Droid</string>
   <color name="blue">#0000FF</color>
+  <string name="homeButton">Home</string>
 </resources>

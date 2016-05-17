@@ -21,7 +21,7 @@
         android:text="Weather App"
         android:layout_width="342.5dp"
         android:layout_height="77.0dp"
-        android:id="@+id/button1"
+        android:id="@+id/weatherButton"
         android:gravity="center"
         android:layout_marginBottom="20.0dp"
         android:layout_marginTop="19.0dp"

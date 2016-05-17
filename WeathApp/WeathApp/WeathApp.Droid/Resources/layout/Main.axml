@@ -12,7 +12,7 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/relativeLayout1"
             android:background="#545454"
             android:layout_marginBottom="0.0dp">
@@ -46,13 +46,9 @@
                 android:text="Get Weather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/weatherBtn"
-                android:layout_alignBottom="@id/ZipCodeEntry"
-                android:width="165dp"
-                android:layout_marginLeft="20dp"
+                android:layout_below="@id/ZipCodeLabel"
                 android:id="@+id/weatherBtn"
-                android:layout_above="@id/ZipCodeLabel"
-                android:layout_alignBaseline="@id/ZipCodeLabel" />
+                android:layout_toRightOf="@id/ZipCodeEntry" />
         </RelativeLayout>
         <TextView
             android:text="Location"
@@ -153,5 +149,11 @@
             android:id="@+id/sunsetText"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="20dp" />
+        <Button
+            android:text="@string/homeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/HomeButton"
+            android:enabled="true" />
     </LinearLayout>
 </ScrollView>

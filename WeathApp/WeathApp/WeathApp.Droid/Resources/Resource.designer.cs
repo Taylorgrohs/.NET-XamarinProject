@@ -79,6 +79,9 @@ namespace WeathApp.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f070016
+			public const int HomeButton = 2131165206;
+			
 			// aapt resource value: 0x7f070006
 			public const int ZipCodeEntry = 2131165190;
 			
@@ -87,9 +90,6 @@ namespace WeathApp.Droid
 			
 			// aapt resource value: 0x7f070004
 			public const int ZipCodeSearchLabel = 2131165188;
-			
-			// aapt resource value: 0x7f070001
-			public const int button1 = 2131165185;
 			
 			// aapt resource value: 0x7f070002
 			public const int button2 = 2131165186;
@@ -139,6 +139,9 @@ namespace WeathApp.Droid
 			// aapt resource value: 0x7f070007
 			public const int weatherBtn = 2131165191;
 			
+			// aapt resource value: 0x7f070001
+			public const int weatherButton = 2131165185;
+			
 			// aapt resource value: 0x7f07000c
 			public const int windLabel = 2131165196;
 			
@@ -182,6 +185,9 @@ namespace WeathApp.Droid
 			
 			// aapt resource value: 0x7f040000
 			public const int hello = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int homeButton = 2130968578;
 			
 			static String()
 			{
