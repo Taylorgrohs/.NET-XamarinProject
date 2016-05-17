@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeathApp.Droid", "WeathApp\WeathApp.Droid\WeathApp.Droid.csproj", "{906E73BB-DCF1-488A-AFF9-3AA15006979F}"
 EndProject
@@ -75,13 +75,16 @@ Global
 		{906E73BB-DCF1-488A-AFF9-3AA15006979F}.Release|x86.ActiveCfg = Release|Any CPU
 		{906E73BB-DCF1-488A-AFF9-3AA15006979F}.Release|x86.Build.0 = Release|Any CPU
 		{906E73BB-DCF1-488A-AFF9-3AA15006979F}.Release|x86.Deploy.0 = Release|Any CPU
-		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
-		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|ARM.ActiveCfg = AppStore|iPhone
-		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
-		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|iPhone.Build.0 = AppStore|iPhone
-		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
-		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|x86.ActiveCfg = AppStore|iPhone
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|Any CPU.Build.0 = Release|iPhoneSimulator
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|ARM.ActiveCfg = Release|iPhoneSimulator
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|ARM.Build.0 = Release|iPhoneSimulator
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|iPhone.ActiveCfg = Release|iPhone
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|iPhone.Build.0 = Release|iPhone
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|x86.ActiveCfg = Release|iPhoneSimulator
+		{669699C4-2C34-477D-B20E-A5423D7042C3}.AppStore|x86.Build.0 = Release|iPhoneSimulator
 		{669699C4-2C34-477D-B20E-A5423D7042C3}.Debug|Any CPU.ActiveCfg = Debug|iPhone
 		{669699C4-2C34-477D-B20E-A5423D7042C3}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{669699C4-2C34-477D-B20E-A5423D7042C3}.Debug|iPhone.ActiveCfg = Debug|iPhone

@@ -46,11 +46,13 @@
                 android:text="Get Weather"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/ZipCodeEntry"
+                android:layout_toRightOf="@+id/weatherBtn"
                 android:layout_alignBottom="@id/ZipCodeEntry"
                 android:width="165dp"
                 android:layout_marginLeft="20dp"
-                android:id="@+id/weatherBtn" />
+                android:id="@+id/weatherBtn"
+                android:layout_above="@id/ZipCodeLabel"
+                android:layout_alignBaseline="@id/ZipCodeLabel" />
         </RelativeLayout>
         <TextView
             android:text="Location"
