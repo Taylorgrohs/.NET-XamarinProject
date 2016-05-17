@@ -5,7 +5,7 @@ using Android.OS;
 
 namespace WeathApp.Droid
 {
-    [Activity(Label = "Sample Weather App", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Epicodus Weather App", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

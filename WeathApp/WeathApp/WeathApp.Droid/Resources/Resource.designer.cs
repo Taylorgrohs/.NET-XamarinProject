@@ -102,6 +102,9 @@ namespace WeathApp.Droid
 			// aapt resource value: 0x7f050008
 			public const int tempText = 2131034120;
 			
+			// aapt resource value: 0x7f050013
+			public const int viewMapButton = 2131034131;
+			
 			// aapt resource value: 0x7f05000d
 			public const int visibilityLabel = 2131034125;
 			
@@ -151,6 +154,9 @@ namespace WeathApp.Droid
 			
 			// aapt resource value: 0x7f040000
 			public const int hello = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int viewMap = 2130968578;
 			
 			static String()
 			{
