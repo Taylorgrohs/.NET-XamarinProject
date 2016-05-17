@@ -4,4 +4,23 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px" />
+    android:minHeight="25px">
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout1"
+        android:background="#545454">
+        <TextView
+            android:text="Search by Zip Code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ZipCodeSearchLabel"
+            android:layout_marginRight="232.5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>
