@@ -6,7 +6,7 @@ using Android.OS;
 
 namespace WeathApp.Droid
 {
-    [Activity(Label = "Sample Weather App", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Epicodus Weather App", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -93,6 +93,14 @@ namespace WeathApp.Droid
             Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
             button2.Click += Button2_Click;
 
+        }
+
+        private void mapClick(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Map);
+
+            Button button = FindViewById<Button>(Resource.Id.mapButton);
+            button.Click += Button_Click;
         }
     }
 }
