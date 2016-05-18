@@ -41,22 +41,6 @@ namespace WeathApp.Droid
 			}
 		}
 		
-		public partial class Color
-		{
-			
-			// aapt resource value: 0x7f050000
-			public const int blue = 2131034112;
-			
-			static Color()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Color()
-			{
-			}
-		}
-		
 		public partial class Drawable
 		{
 			
@@ -79,74 +63,92 @@ namespace WeathApp.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070016
-			public const int HomeButton = 2131165206;
+			// aapt resource value: 0x7f060016
+			public const int HomeButton = 2131099670;
 			
-			// aapt resource value: 0x7f070006
-			public const int ZipCodeEntry = 2131165190;
+			// aapt resource value: 0x7f06001a
+			public const int TaskBtn = 2131099674;
 			
-			// aapt resource value: 0x7f070005
-			public const int ZipCodeLabel = 2131165189;
+			// aapt resource value: 0x7f060019
+			public const int TaskEntry = 2131099673;
 			
-			// aapt resource value: 0x7f070004
-			public const int ZipCodeSearchLabel = 2131165188;
+			// aapt resource value: 0x7f060018
+			public const int TaskLabel = 2131099672;
 			
-			// aapt resource value: 0x7f070002
-			public const int button2 = 2131165186;
+			// aapt resource value: 0x7f06001b
+			public const int TaskListLabel = 2131099675;
 			
-			// aapt resource value: 0x7f07000f
-			public const int humidityText = 2131165199;
+			// aapt resource value: 0x7f06001c
+			public const int TaskListTexts = 2131099676;
 			
-			// aapt resource value: 0x7f07000e
-			public const int humidtyLabel = 2131165198;
+			// aapt resource value: 0x7f060017
+			public const int Title = 2131099671;
 			
-			// aapt resource value: 0x7f070008
-			public const int locationLabel = 2131165192;
+			// aapt resource value: 0x7f060006
+			public const int ZipCodeEntry = 2131099654;
 			
-			// aapt resource value: 0x7f070009
-			public const int locationText = 2131165193;
+			// aapt resource value: 0x7f060005
+			public const int ZipCodeLabel = 2131099653;
 			
-			// aapt resource value: 0x7f070003
-			public const int relativeLayout1 = 2131165187;
+			// aapt resource value: 0x7f060004
+			public const int ZipCodeSearchLabel = 2131099652;
 			
-			// aapt resource value: 0x7f070012
-			public const int sunriseLabel = 2131165202;
+			// aapt resource value: 0x7f06000f
+			public const int humidityText = 2131099663;
 			
-			// aapt resource value: 0x7f070013
-			public const int sunriseText = 2131165203;
+			// aapt resource value: 0x7f06000e
+			public const int humidtyLabel = 2131099662;
 			
-			// aapt resource value: 0x7f070014
-			public const int sunsetLabel = 2131165204;
+			// aapt resource value: 0x7f060008
+			public const int locationLabel = 2131099656;
 			
-			// aapt resource value: 0x7f070015
-			public const int sunsetText = 2131165205;
+			// aapt resource value: 0x7f060009
+			public const int locationText = 2131099657;
 			
-			// aapt resource value: 0x7f07000a
-			public const int tempLabel = 2131165194;
+			// aapt resource value: 0x7f060003
+			public const int relativeLayout1 = 2131099651;
 			
-			// aapt resource value: 0x7f07000b
-			public const int tempText = 2131165195;
+			// aapt resource value: 0x7f060012
+			public const int sunriseLabel = 2131099666;
 			
-			// aapt resource value: 0x7f070000
-			public const int textView1 = 2131165184;
+			// aapt resource value: 0x7f060013
+			public const int sunriseText = 2131099667;
 			
-			// aapt resource value: 0x7f070010
-			public const int visibilityLabel = 2131165200;
+			// aapt resource value: 0x7f060014
+			public const int sunsetLabel = 2131099668;
 			
-			// aapt resource value: 0x7f070011
-			public const int visibilityText = 2131165201;
+			// aapt resource value: 0x7f060015
+			public const int sunsetText = 2131099669;
 			
-			// aapt resource value: 0x7f070007
-			public const int weatherBtn = 2131165191;
+			// aapt resource value: 0x7f06000a
+			public const int tempLabel = 2131099658;
 			
-			// aapt resource value: 0x7f070001
-			public const int weatherButton = 2131165185;
+			// aapt resource value: 0x7f06000b
+			public const int tempText = 2131099659;
 			
-			// aapt resource value: 0x7f07000c
-			public const int windLabel = 2131165196;
+			// aapt resource value: 0x7f060000
+			public const int textView1 = 2131099648;
 			
-			// aapt resource value: 0x7f07000d
-			public const int windText = 2131165197;
+			// aapt resource value: 0x7f060002
+			public const int toDoButton = 2131099650;
+			
+			// aapt resource value: 0x7f060010
+			public const int visibilityLabel = 2131099664;
+			
+			// aapt resource value: 0x7f060011
+			public const int visibilityText = 2131099665;
+			
+			// aapt resource value: 0x7f060007
+			public const int weatherBtn = 2131099655;
+			
+			// aapt resource value: 0x7f060001
+			public const int weatherButton = 2131099649;
+			
+			// aapt resource value: 0x7f06000c
+			public const int windLabel = 2131099660;
+			
+			// aapt resource value: 0x7f06000d
+			public const int windText = 2131099661;
 			
 			static Id()
 			{
@@ -167,6 +169,9 @@ namespace WeathApp.Droid
 			// aapt resource value: 0x7f030001
 			public const int Main = 2130903041;
 			
+			// aapt resource value: 0x7f030002
+			public const int ToDo = 2130903042;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -179,6 +184,9 @@ namespace WeathApp.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f040003
+			public const int ToDoButton = 2130968579;
 			
 			// aapt resource value: 0x7f040001
 			public const int app_name = 2130968577;
@@ -202,8 +210,8 @@ namespace WeathApp.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f060000
-			public const int Mono_Android_Theme_Splash = 2131099648;
+			// aapt resource value: 0x7f050000
+			public const int Mono_Android_Theme_Splash = 2131034112;
 			
 			static Style()
 			{
