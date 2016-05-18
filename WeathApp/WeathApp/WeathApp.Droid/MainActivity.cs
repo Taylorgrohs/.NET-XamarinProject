@@ -3,6 +3,7 @@ using Android.App;
 using Android.Widget;
 using Android.OS;
 
+
 namespace WeathApp.Droid
 {
     [Activity(Label = "Sample Weather App", MainLauncher = true, Icon = "@drawable/icon")]
@@ -12,16 +13,51 @@ namespace WeathApp.Droid
         {
             base.OnCreate(bundle);
 
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.Home);
 
-            Button button = FindViewById<Button>(Resource.Id.weatherBtn);
+            Button button = FindViewById<Button>(Resource.Id.weatherButton);
+            button.Click += Button3_Click;
 
-            button.Click += Button_Click;
+            Button button2 = FindViewById<Button>(Resource.Id.toDoButton);
+            button2.Click += Button4_Click;
+        }
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.ToDo);
+
+            Button button2 = FindViewById<Button>(Resource.Id.TaskBtn);
+            button2.Click += Button5_Click;
+            Button button3 = FindViewById<Button>(Resource.Id.HomeButton);
+            button3.Click += Button2_Click;
+
         }
 
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            EditText TaskEntry = FindViewById<EditText>(Resource.Id.TaskEntry);
+
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
+
+            if (!String.IsNullOrEmpty(TaskEntry.Text))
+            {
+                string entry = TaskEntry.Text;
+                Item newItem = new Item();
+                newItem.Description = entry;
+                var allItems = Item.GetAll();
+                var list = "";
+                foreach(var item in allItems)
+                    {
+                    list += item.Description + "\n";
+                    }
+                FindViewById<TextView>(Resource.Id.TaskListTexts).Text = list;
+            }
+        }
         private async void Button_Click(object sender, EventArgs e)
         {
             EditText zipCodeEntry = FindViewById<EditText>(Resource.Id.ZipCodeEntry);
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
 
             if (!String.IsNullOrEmpty(zipCodeEntry.Text))
             {
@@ -34,6 +70,29 @@ namespace WeathApp.Droid
                 FindViewById<TextView>(Resource.Id.sunriseText).Text = weather.Sunrise;
                 FindViewById<TextView>(Resource.Id.sunsetText).Text = weather.Sunset;
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Home);
+
+            Button button = FindViewById<Button>(Resource.Id.weatherButton);
+            button.Click += Button3_Click;
+
+            Button button2 = FindViewById<Button>(Resource.Id.toDoButton);
+            button2.Click += Button4_Click;
+
+        }
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Main);
+
+            Button button = FindViewById<Button>(Resource.Id.weatherBtn);
+            button.Click += Button_Click;
+
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
+
         }
     }
 }

@@ -2,4 +2,6 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">WeathApp.Droid</string>
+  <string name="homeButton">Home</string>
+  <string name="ToDoButton">To Do List</string>
 </resources>
