@@ -106,7 +106,8 @@ namespace WeathApp.Droid
         {
             SetContentView(Resource.Layout.Map);
 
-            
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
         }
     }
 }
