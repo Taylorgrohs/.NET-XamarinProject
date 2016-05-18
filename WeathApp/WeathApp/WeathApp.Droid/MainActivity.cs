@@ -20,6 +20,9 @@ namespace WeathApp.Droid
 
             Button button2 = FindViewById<Button>(Resource.Id.toDoButton);
             button2.Click += Button4_Click;
+
+            Button button3 = FindViewById<Button>(Resource.Id.mapButton);
+            button3.Click += Button6_Click;
         }
         private void Button4_Click(object sender, EventArgs e)
         {
@@ -82,7 +85,11 @@ namespace WeathApp.Droid
             Button button2 = FindViewById<Button>(Resource.Id.toDoButton);
             button2.Click += Button4_Click;
 
+            Button button3 = FindViewById<Button>(Resource.Id.mapButton);
+            button3.Click += Button6_Click;
+
         }
+
         private void Button3_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.Main);
@@ -95,12 +102,11 @@ namespace WeathApp.Droid
 
         }
 
-        private void mapClick(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.Map);
 
-            Button button = FindViewById<Button>(Resource.Id.mapButton);
-            button.Click += Button_Click;
+            
         }
     }
 }
