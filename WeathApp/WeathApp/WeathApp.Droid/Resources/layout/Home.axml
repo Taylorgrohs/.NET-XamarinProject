@@ -41,5 +41,15 @@
             android:background="@android:color/holo_red_light"
             android:layout_marginRight="0.0dp"
             android:layout_gravity="center" />
+        <Button
+            android:text="Map Page"
+            android:layout_width="342.5dp"
+            android:layout_height="75.5dp"
+            android:layout_marginTop="19.0dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:id="@+id/toDoButton"
+            android:background="@android:color/holo_red_light"
+            android:layout_marginRight="0.0dp"
+            android:layout_gravity="center" />
     </LinearLayout>
 </ScrollView>
