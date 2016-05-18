@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeathApp.Droid", "WeathApp\WeathApp.Droid\WeathApp.Droid.csproj", "{906E73BB-DCF1-488A-AFF9-3AA15006979F}"
 EndProject
@@ -154,6 +154,7 @@ Global
 		{4ED9C15B-9127-4F58-A4D9-8ECFB506DC08}.AppStore|x86.Build.0 = Release|Any CPU
 		{4ED9C15B-9127-4F58-A4D9-8ECFB506DC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4ED9C15B-9127-4F58-A4D9-8ECFB506DC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ED9C15B-9127-4F58-A4D9-8ECFB506DC08}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{4ED9C15B-9127-4F58-A4D9-8ECFB506DC08}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{4ED9C15B-9127-4F58-A4D9-8ECFB506DC08}.Debug|ARM.Build.0 = Debug|Any CPU
 		{4ED9C15B-9127-4F58-A4D9-8ECFB506DC08}.Debug|iPhone.ActiveCfg = Debug|Any CPU

@@ -94,6 +94,14 @@ namespace WeathApp.Droid
             button2.Click += Button2_Click;
 
         }
+
+        private void mapClick(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Map);
+
+            Button button = FindViewById<Button>(Resource.Id.mapButton);
+            button.Click += Button_Click;
+        }
     }
 }
 
