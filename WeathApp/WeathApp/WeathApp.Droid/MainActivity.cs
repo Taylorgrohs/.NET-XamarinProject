@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace WeathApp.Droid
 {
-    [Activity(Label = "Epicodus Weather App", MainLauncher = true, Icon = "@drawable/icon", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
+    [Activity(Label = "Xamarin Projects", MainLauncher = true, Icon = "@drawable/icon", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 
     public class MainActivity : Activity, IOnMapReadyCallback
     {
