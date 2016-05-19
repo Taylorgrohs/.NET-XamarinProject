@@ -2,25 +2,46 @@
 using Android.App;
 using Android.Widget;
 using Android.OS;
-
+using Android.Gms.Maps;
 
 namespace WeathApp.Droid
 {
     [Activity(Label = "Epicodus Weather App", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    public class MainActivity : Activity, IOnMapReadyCallback
     {
+        private GoogleMap mMap;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Home);
 
+            
+
             Button button = FindViewById<Button>(Resource.Id.weatherButton);
             button.Click += Button3_Click;
 
             Button button2 = FindViewById<Button>(Resource.Id.toDoButton);
             button2.Click += Button4_Click;
+
+            Button button3 = FindViewById<Button>(Resource.Id.mapButton);
+            button3.Click += Button6_Click;
         }
+
+        private void SetUpMap()
+        {
+            if(mMap == null)
+            {
+                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
+            }
+        }
+
+        public void OnMapReady(GoogleMap googleMap)
+        {
+            mMap = googleMap;
+        }
+
         private void Button4_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.ToDo);
@@ -82,7 +103,11 @@ namespace WeathApp.Droid
             Button button2 = FindViewById<Button>(Resource.Id.toDoButton);
             button2.Click += Button4_Click;
 
+            Button button3 = FindViewById<Button>(Resource.Id.mapButton);
+            button3.Click += Button6_Click;
+
         }
+
         private void Button3_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.Main);
@@ -95,13 +120,17 @@ namespace WeathApp.Droid
 
         }
 
-        private void mapClick(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.Map);
 
-            Button button = FindViewById<Button>(Resource.Id.mapButton);
-            button.Click += Button_Click;
+            SetUpMap();
+
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
         }
+
+        
     }
 }
 
