@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace WeathApp.Droid
 {
-    [Activity(Label = "The Xamarin Projects", MainLauncher = true, Icon = "@drawable/icon", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
+    [Activity(Label = "Epicodus Weather App", MainLauncher = true, Icon = "@drawable/icon", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 
     public class MainActivity : Activity, IOnMapReadyCallback
     {
@@ -36,7 +36,6 @@ namespace WeathApp.Droid
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
             }
             
-           
         }
 
         public void OnMapReady(GoogleMap googleMap)
@@ -52,6 +51,7 @@ namespace WeathApp.Droid
 
             Button button2 = FindViewById<Button>(Resource.Id.TaskBtn);
             button2.Click += Button5_Click;
+
             Button button3 = FindViewById<Button>(Resource.Id.HomeButton);
             button3.Click += Button2_Click;
 
@@ -111,13 +111,6 @@ namespace WeathApp.Droid
         {
             SetContentView(Resource.Layout.Home);
 
-            //if (mMap != null)
-            //{
-            //    FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map);
-
-            //    heMap = null;
-            //}
-
             Button button = FindViewById<Button>(Resource.Id.weatherButton);
             button.Click += Button3_Click;
 
@@ -127,6 +120,7 @@ namespace WeathApp.Droid
             Button button3 = FindViewById<Button>(Resource.Id.mapButton);
             button3.Click += Button6_Click;
 
+            Recreate();
         }
 
         private void Button3_Click(object sender, EventArgs e)
