@@ -3,6 +3,7 @@ using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Gms.Maps;
+using System.Diagnostics;
 
 namespace WeathApp.Droid
 {
@@ -16,8 +17,6 @@ namespace WeathApp.Droid
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Home);
-
-            
 
             Button button = FindViewById<Button>(Resource.Id.weatherButton);
             button.Click += Button3_Click;
@@ -35,11 +34,15 @@ namespace WeathApp.Droid
             {
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
             }
+            
+           
         }
 
         public void OnMapReady(GoogleMap googleMap)
         {
             mMap = googleMap;
+
+            System.Diagnostics.Debug.Print("****###" + mMap.MaxZoomLevel);
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -93,9 +96,26 @@ namespace WeathApp.Droid
             }
         }
 
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Map);
+           
+            SetUpMap();
+
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
+        }
+
         private void Button2_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.Home);
+
+            //if (mMap != null)
+            //{
+            //    FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map);
+
+            //    heMap = null;
+            //}
 
             Button button = FindViewById<Button>(Resource.Id.weatherButton);
             button.Click += Button3_Click;
@@ -120,15 +140,7 @@ namespace WeathApp.Droid
 
         }
 
-        private void Button6_Click(object sender, EventArgs e)
-        {
-            SetContentView(Resource.Layout.Map);
-
-            SetUpMap();
-
-            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
-            button2.Click += Button2_Click;
-        }
+       
 
         
     }
