@@ -1,4 +1,4 @@
-# Xamarin Android Project
+# Xamarin Project
 
 #### _A small suite of demo apps built in Xamarin for Android, 2016_
 
