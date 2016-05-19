@@ -13,6 +13,11 @@ namespace WeathApp.Droid
     {
         private GoogleMap mMap;
 
+        private Button btnNormal;
+        private Button btnHybrid;
+        private Button btnSatellite;
+        private Button btnTerrain;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -103,8 +108,38 @@ namespace WeathApp.Droid
            
             SetUpMap();
 
+            btnNormal = FindViewById<Button>(Resource.Id.btnNormal);
+            btnHybrid = FindViewById<Button>(Resource.Id.btnHybrid);
+            btnSatellite = FindViewById<Button>(Resource.Id.btnSatellite);
+            btnTerrain = FindViewById<Button>(Resource.Id.btnTerrain);
+
+            btnNormal.Click += btnNormal_Click;
+            btnHybrid.Click += btnHybrid_Click;
+            btnSatellite.Click += btnSatellite_Click;
+            btnTerrain.Click += btnTerrain_Click;
+
             Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
             button2.Click += Button2_Click;
+        }
+
+        void btnNormal_Click(object sender, EventArgs e)
+        {
+            mMap.MapType = GoogleMap.MapTypeNormal;
+        }
+
+        void btnHybrid_Click(object sender, EventArgs e)
+        {
+            mMap.MapType = GoogleMap.MapTypeHybrid;
+        }
+
+        void btnSatellite_Click(object sender, EventArgs e)
+        {
+            mMap.MapType = GoogleMap.MapTypeSatellite;
+        }
+
+        void btnTerrain_Click(object sender, EventArgs e)
+        {
+            mMap.MapType = GoogleMap.MapTypeTerrain;
         }
 
         private void Button2_Click(object sender, EventArgs e)

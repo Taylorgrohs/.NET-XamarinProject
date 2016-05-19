@@ -334,23 +334,23 @@ namespace WeathApp.Droid
 			// aapt resource value: 0x7f070024
 			public const int HomeButton = 2131165220;
 			
-			// aapt resource value: 0x7f070029
-			public const int TaskBtn = 2131165225;
+			// aapt resource value: 0x7f07002d
+			public const int TaskBtn = 2131165229;
 			
-			// aapt resource value: 0x7f070028
-			public const int TaskEntry = 2131165224;
-			
-			// aapt resource value: 0x7f070027
-			public const int TaskLabel = 2131165223;
-			
-			// aapt resource value: 0x7f07002a
-			public const int TaskListLabel = 2131165226;
+			// aapt resource value: 0x7f07002c
+			public const int TaskEntry = 2131165228;
 			
 			// aapt resource value: 0x7f07002b
-			public const int TaskListTexts = 2131165227;
+			public const int TaskLabel = 2131165227;
 			
-			// aapt resource value: 0x7f070026
-			public const int Title = 2131165222;
+			// aapt resource value: 0x7f07002e
+			public const int TaskListLabel = 2131165230;
+			
+			// aapt resource value: 0x7f07002f
+			public const int TaskListTexts = 2131165231;
+			
+			// aapt resource value: 0x7f07002a
+			public const int Title = 2131165226;
 			
 			// aapt resource value: 0x7f070014
 			public const int ZipCodeEntry = 2131165204;
@@ -369,6 +369,18 @@ namespace WeathApp.Droid
 			
 			// aapt resource value: 0x7f07000a
 			public const int auto = 2131165194;
+			
+			// aapt resource value: 0x7f070027
+			public const int btnHybrid = 2131165223;
+			
+			// aapt resource value: 0x7f070026
+			public const int btnNormal = 2131165222;
+			
+			// aapt resource value: 0x7f070028
+			public const int btnSatellite = 2131165224;
+			
+			// aapt resource value: 0x7f070029
+			public const int btnTerrain = 2131165225;
 			
 			// aapt resource value: 0x7f07000b
 			public const int dark = 2131165195;
