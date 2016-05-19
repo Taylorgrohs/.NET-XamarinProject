@@ -2,18 +2,22 @@
 using Android.App;
 using Android.Widget;
 using Android.OS;
-
+using Android.Gms.Maps;
 
 namespace WeathApp.Droid
 {
     [Activity(Label = "Epicodus Weather App", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    public class MainActivity : Activity, IOnMapReadyCallback
     {
+        private GoogleMap mMap;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Home);
+
+            
 
             Button button = FindViewById<Button>(Resource.Id.weatherButton);
             button.Click += Button3_Click;
@@ -24,6 +28,20 @@ namespace WeathApp.Droid
             Button button3 = FindViewById<Button>(Resource.Id.mapButton);
             button3.Click += Button6_Click;
         }
+
+        private void SetUpMap()
+        {
+            if(mMap == null)
+            {
+                FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
+            }
+        }
+
+        public void OnMapReady(GoogleMap googleMap)
+        {
+            mMap = googleMap;
+        }
+
         private void Button4_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.ToDo);
@@ -106,9 +124,13 @@ namespace WeathApp.Droid
         {
             SetContentView(Resource.Layout.Map);
 
+            SetUpMap();
+
             Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
             button2.Click += Button2_Click;
         }
+
+        
     }
 }
 

@@ -334,23 +334,23 @@ namespace WeathApp.Droid
 			// aapt resource value: 0x7f070024
 			public const int HomeButton = 2131165220;
 			
+			// aapt resource value: 0x7f070029
+			public const int TaskBtn = 2131165225;
+			
 			// aapt resource value: 0x7f070028
-			public const int TaskBtn = 2131165224;
+			public const int TaskEntry = 2131165224;
 			
 			// aapt resource value: 0x7f070027
-			public const int TaskEntry = 2131165223;
-			
-			// aapt resource value: 0x7f070026
-			public const int TaskLabel = 2131165222;
-			
-			// aapt resource value: 0x7f070029
-			public const int TaskListLabel = 2131165225;
+			public const int TaskLabel = 2131165223;
 			
 			// aapt resource value: 0x7f07002a
-			public const int TaskListTexts = 2131165226;
+			public const int TaskListLabel = 2131165226;
 			
-			// aapt resource value: 0x7f070025
-			public const int Title = 2131165221;
+			// aapt resource value: 0x7f07002b
+			public const int TaskListTexts = 2131165227;
+			
+			// aapt resource value: 0x7f070026
+			public const int Title = 2131165222;
 			
 			// aapt resource value: 0x7f070014
 			public const int ZipCodeEntry = 2131165204;
@@ -393,6 +393,9 @@ namespace WeathApp.Droid
 			
 			// aapt resource value: 0x7f070017
 			public const int locationText = 2131165207;
+			
+			// aapt resource value: 0x7f070025
+			public const int map = 2131165221;
 			
 			// aapt resource value: 0x7f070010
 			public const int mapButton = 2131165200;
@@ -612,6 +615,9 @@ namespace WeathApp.Droid
 			
 			// aapt resource value: 0x7f04001e
 			public const int common_signin_button_text_long = 2130968606;
+			
+			// aapt resource value: 0x7f040023
+			public const int google_maps_key = 2130968611;
 			
 			// aapt resource value: 0x7f04001f
 			public const int hello = 2130968607;
