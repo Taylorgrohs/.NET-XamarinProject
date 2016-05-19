@@ -3,20 +3,26 @@ using Android.App;
 using Android.Widget;
 using Android.OS;
 using Android.Gms.Maps;
+using System.Diagnostics;
 
 namespace WeathApp.Droid
 {
-    [Activity(Label = "Epicodus Weather App", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Xamarin Projects", MainLauncher = true, Icon = "@drawable/icon", ConfigurationChanges = Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
+
     public class MainActivity : Activity, IOnMapReadyCallback
     {
         private GoogleMap mMap;
+
+        private Button btnNormal;
+        private Button btnHybrid;
+        private Button btnSatellite;
+        private Button btnTerrain;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView(Resource.Layout.Home);
-
 
 
             Button button = FindViewById<Button>(Resource.Id.weatherButton);
@@ -38,11 +44,14 @@ namespace WeathApp.Droid
             {
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
             }
+
         }
 
         public void OnMapReady(GoogleMap googleMap)
         {
             mMap = googleMap;
+
+            System.Diagnostics.Debug.Print("****###" + mMap.MaxZoomLevel);
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -51,6 +60,7 @@ namespace WeathApp.Droid
 
             Button button2 = FindViewById<Button>(Resource.Id.TaskBtn);
             button2.Click += Button5_Click;
+
             Button button3 = FindViewById<Button>(Resource.Id.HomeButton);
             button3.Click += Button2_Click;
 
@@ -96,6 +106,46 @@ namespace WeathApp.Droid
             }
         }
 
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            SetContentView(Resource.Layout.Map);
+
+            SetUpMap();
+
+            btnNormal = FindViewById<Button>(Resource.Id.btnNormal);
+            btnHybrid = FindViewById<Button>(Resource.Id.btnHybrid);
+            btnSatellite = FindViewById<Button>(Resource.Id.btnSatellite);
+            btnTerrain = FindViewById<Button>(Resource.Id.btnTerrain);
+
+            btnNormal.Click += btnNormal_Click;
+            btnHybrid.Click += btnHybrid_Click;
+            btnSatellite.Click += btnSatellite_Click;
+            btnTerrain.Click += btnTerrain_Click;
+
+            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
+            button2.Click += Button2_Click;
+        }
+
+        void btnNormal_Click(object sender, EventArgs e)
+        {
+            mMap.MapType = GoogleMap.MapTypeNormal;
+        }
+
+        void btnHybrid_Click(object sender, EventArgs e)
+        {
+            mMap.MapType = GoogleMap.MapTypeHybrid;
+        }
+
+        void btnSatellite_Click(object sender, EventArgs e)
+        {
+            mMap.MapType = GoogleMap.MapTypeSatellite;
+        }
+
+        void btnTerrain_Click(object sender, EventArgs e)
+        {
+            mMap.MapType = GoogleMap.MapTypeTerrain;
+        }
+
         private void Button2_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.Home);
@@ -109,8 +159,12 @@ namespace WeathApp.Droid
             Button button3 = FindViewById<Button>(Resource.Id.mapButton);
             button3.Click += Button6_Click;
 
+
             Button button4 = FindViewById<Button>(Resource.Id.mileageButton);
             button4.Click += Button7_Click;
+
+
+            Recreate();
 
         }
 
@@ -126,15 +180,7 @@ namespace WeathApp.Droid
 
         }
 
-        private void Button6_Click(object sender, EventArgs e)
-        {
-            SetContentView(Resource.Layout.Map);
 
-            SetUpMap();
-
-            Button button2 = FindViewById<Button>(Resource.Id.HomeButton);
-            button2.Click += Button2_Click;
-        }
 
         private void Button7_Click(object sender, EventArgs e)
         {

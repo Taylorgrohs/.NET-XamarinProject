@@ -8,6 +8,18 @@
 
 _This is a single app with multiple pages that contain small programs. It is built in Xamarin using C# and runs on Android devices_
 
+<p>
+  <img src="https://raw.githubusercontent.com/mickeyfr33/weatherApp2/master/WeathApp/WeathApp/WeathApp/screenShots/homePage.png" width="350"/>
+   <img src="https://raw.githubusercontent.com/mickeyfr33/weatherApp2/master/WeathApp/WeathApp/WeathApp/screenShots/mapPage.png" width="350"/>
+</p>
+
+<p>
+  <img src="https://raw.githubusercontent.com/mickeyfr33/weatherApp2/master/WeathApp/WeathApp/WeathApp/screenShots/toDoList.png" width="350"/>
+   <img src="https://raw.githubusercontent.com/mickeyfr33/weatherApp2/master/WeathApp/WeathApp/WeathApp/screenShots/weather.png" width="350"/>
+</p>
+
+
+
 ## Setup/Installation Requirements
 
 * _Download Xamarin in Visual Studio or Xamarin Studio_

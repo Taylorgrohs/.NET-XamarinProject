@@ -47,5 +47,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="screenShots\homePage.png" />
+    <Content Include="screenShots\mapPage.png" />
+    <Content Include="screenShots\toDoList.png" />
+    <Content Include="screenShots\weather.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
