@@ -4,5 +4,6 @@
 	<string name="app_name">WeathApp.Droid</string>
   <string name="homeButton">Home</string>
   <string name="ToDoButton">To Do List</string>
+  <string name="mileageButton">Mileage Calculator</string>
   <string name="google_maps_key">AIzaSyDI8R1LM3lHxMu5g-aaBcuQ7Y7kndTI_FI</string>
 </resources>

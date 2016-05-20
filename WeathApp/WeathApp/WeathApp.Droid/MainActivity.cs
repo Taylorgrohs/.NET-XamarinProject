@@ -190,7 +190,7 @@ namespace WeathApp.Droid
           button3.Click += Button2_Click;
 
           Button button8 = FindViewById<Button>(Resource.Id.MileageBtn);
-          button8.Click =+ Button8_Click;
+          button8.Click += Button8_Click;
         }
 
         private void Button8_Click(object sender, EventArgs e)
@@ -201,11 +201,11 @@ namespace WeathApp.Droid
 
           if ((!String.IsNullOrEmpty(milesDriven.Text)) && (!String.IsNullOrEmpty(gallonsFuel.Text)))
           {
-            int inputMiles = milesDriven.Text;
-            int inputGallons = gallonsFuel.Text;
-            int outputMileage = inputMiles / inputGallons;
+            float inputMiles = Int32.Parse(milesDriven.Text);
+            float inputGallons = Int32.Parse(gallonsFuel.Text);
+            float outputMileage = inputMiles / inputGallons;
 
-            FindViewById<TextView>(Resource.Id.MileageOutput).Text = outputMileage;
+            FindViewById<TextView>(Resource.Id.MileageOutput).Text = outputMileage.ToString();
           }
 
         }

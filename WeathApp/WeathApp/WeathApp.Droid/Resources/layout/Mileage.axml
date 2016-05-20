@@ -66,25 +66,26 @@
                 android:background="@android:color/background_light"
                 android:layout_marginTop="6.0dp"
                 android:textColor="@android:color/black" />
-            <Button
-                android:text="Calculate Mileage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/Fuel"
-                android:id="@+id/MileageBtn" />
         </RelativeLayout>
+        <Button
+            android:text="Calculate Mileage"
+            android:id="@+id/MileageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.0dp" />
         <TextView
             android:text="Your Mileage:"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40.1dp"
             android:id="@+id/MileageOutputLabel"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="0.0dp" />
         <TextView
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="55.6dp"
             android:id="@+id/MileageOutput"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="10dp" />
