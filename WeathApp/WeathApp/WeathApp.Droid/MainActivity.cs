@@ -24,6 +24,7 @@ namespace WeathApp.Droid
 
             SetContentView(Resource.Layout.Home);
 
+
             Button button = FindViewById<Button>(Resource.Id.weatherButton);
             button.Click += Button3_Click;
 
@@ -32,6 +33,9 @@ namespace WeathApp.Droid
 
             Button button3 = FindViewById<Button>(Resource.Id.mapButton);
             button3.Click += Button6_Click;
+
+            Button button4 = FindViewById<Button>(Resource.Id.mileageButton);
+            button4.Click += Button7_Click;
         }
 
         private void SetUpMap()
@@ -40,7 +44,7 @@ namespace WeathApp.Droid
             {
                 FragmentManager.FindFragmentById<MapFragment>(Resource.Id.map).GetMapAsync(this);
             }
-            
+
         }
 
         public void OnMapReady(GoogleMap googleMap)
@@ -105,7 +109,7 @@ namespace WeathApp.Droid
         private void Button6_Click(object sender, EventArgs e)
         {
             SetContentView(Resource.Layout.Map);
-           
+
             SetUpMap();
 
             btnNormal = FindViewById<Button>(Resource.Id.btnNormal);
@@ -155,7 +159,13 @@ namespace WeathApp.Droid
             Button button3 = FindViewById<Button>(Resource.Id.mapButton);
             button3.Click += Button6_Click;
 
+
+            Button button4 = FindViewById<Button>(Resource.Id.mileageButton);
+            button4.Click += Button7_Click;
+
+
             Recreate();
+
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -170,9 +180,37 @@ namespace WeathApp.Droid
 
         }
 
-       
 
-        
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+          SetContentView(Resource.Layout.Mileage);
+
+          Button button3 = FindViewById<Button>(Resource.Id.HomeButton);
+          button3.Click += Button2_Click;
+
+          Button button8 = FindViewById<Button>(Resource.Id.MileageBtn);
+          button8.Click += Button8_Click;
+        }
+
+        private void Button8_Click(object sender, EventArgs e)
+        {
+
+          EditText milesDriven = FindViewById<EditText>(Resource.Id.MilesInput);
+          EditText gallonsFuel = FindViewById<EditText>(Resource.Id.GallonsInput);
+
+          if ((!String.IsNullOrEmpty(milesDriven.Text)) && (!String.IsNullOrEmpty(gallonsFuel.Text)))
+          {
+            float inputMiles = Int32.Parse(milesDriven.Text);
+            float inputGallons = Int32.Parse(gallonsFuel.Text);
+            float outputMileage = inputMiles / inputGallons;
+
+            FindViewById<TextView>(Resource.Id.MileageOutput).Text = outputMileage.ToString();
+          }
+
+        }
+
+
+
     }
 }
-
